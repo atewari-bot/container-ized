@@ -1,0 +1,8 @@
+version: '3' # version of docker compose
+services: # services represent - type of container
+  redis-server:
+    image: "redis"
+  node-app:
+    build: .
+    ports:
+      - "4001:8081" # <your-machine-port>:<container-port>
