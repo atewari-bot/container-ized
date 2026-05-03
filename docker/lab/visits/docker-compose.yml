@@ -3,6 +3,7 @@ services: # services represent - type of container
   redis-server:
     image: "redis"
   node-app:
+    restart: on-failure
     build: .
     ports:
       - "4001:8081" # <your-machine-port>:<container-port>
